@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarvedRock.EndToEnd.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58af0c59212cfcff8b84f1657b70b322ca47b65d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5fa8b3449209d3078bf2082a069bc128a46a98c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarvedRock.EndToEnd.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarvedRock.EndToEnd.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,4 +25,13 @@ public class Tests : PageTest
         // Expects the URL to contain intro.
         await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
     }
+    
+    [Test]
+    public async Task HomePageHasCorrectContent()
+    {
+        await Page.GotoAsync("https://localhost:7224/");
+
+        await Expect(Page).ToHaveTitleAsync("Carved Rock Fitness");
+        await Expect(Page.GetByText("GET A GRIP")).ToBeVisibleAsync();
+    }
 }
