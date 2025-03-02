@@ -1,1 +1,4 @@
-
+/.idea/
+/EndToEnd.Tests/bin/
+/EndToEnd.Tests/obj/
+/.DS_Store/
