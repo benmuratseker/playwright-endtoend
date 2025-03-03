@@ -1,3 +1,5 @@
+using Microsoft.Playwright;
+
 namespace EndToEnd.Tests;
 
 [Parallelizable(ParallelScope.Self)]
@@ -33,5 +35,27 @@ public class Tests : PageTest
         
         await Expect(Page).ToHaveTitleAsync("Carved Rock Fitness");
         await Expect(Page.GetByText("GET A GRIP")).ToBeVisibleAsync();
+    }
+    
+    [Test]
+    public async Task ListingPageAddingItemsToCart()
+    {
+        await Page.GotoAsync("https://localhost:7224/");
+        await Page.GetByRole(AriaRole.Link, new() { Name = "Footwear" }).ClickAsync();
+        await Page.GetByRole(AriaRole.Row, new() { Name = "Trailblazer Trailblazer Great" }).GetByRole(AriaRole.Button).ClickAsync();
+        await CheckCartItemCountAsync(1);
+        
+        await Page.GetByRole(AriaRole.Row, new() { Name = "Woodsman Woodsman All the" }).GetByRole(AriaRole.Button).ClickAsync();
+        await CheckCartItemCountAsync(2);
+        
+        await Page.GetByRole(AriaRole.Row, new() { Name = "Trailblazer Trailblazer Great" }).GetByRole(AriaRole.Button).ClickAsync();
+        await CheckCartItemCountAsync(3);
+        
+        await Expect(Page.Locator("#carvedrockcart")).ToContainTextAsync("(3)");
+    }
+
+    private async Task CheckCartItemCountAsync(int expectedCount)
+    {
+        await Expect(Page.Locator("#carvedrockcart")).ToContainTextAsync($"({expectedCount})");
     }
 }
