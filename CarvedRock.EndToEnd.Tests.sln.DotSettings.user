@@ -2,6 +2,8 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=da3725a1_002D76dd_002D4ebe_002D8db6_002D0e27b7ae70b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Tests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::9CC4353E-F888-47DA-B556-89E5DDFBF83B::net8.0::EndToEnd.Tests.Tests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::9CC4353E-F888-47DA-B556-89E5DDFBF83B::net8.0::EndToEnd.Tests.CancelCheckoutTests.MyTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::9CC4353E-F888-47DA-B556-89E5DDFBF83B::net8.0::EndToEnd.Tests.CancelCheckoutTests.LoggenIncheckoutCancellation&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestRunner/RunConfigurationFilename/@EntryValue">/Users/muratseker/Documents/repos/playwright-endtoend/EndToEnd.Tests/.runsettings</s:String></wpf:ResourceDictionary>
