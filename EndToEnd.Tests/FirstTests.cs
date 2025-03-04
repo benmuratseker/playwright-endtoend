@@ -50,6 +50,9 @@ public class Tests : BaseTest //PageTest
         
         await Page.GetByRole(AriaRole.Row, new() { Name = "Woodsman Woodsman All the" }).GetByRole(AriaRole.Button).ClickAsync();
         await CheckCartItemCountAsync(2);
+
+        await Page.ScreenshotAsync(new PageScreenshotOptions
+            { Path = "cart.png" });
         
         await Page.GetByRole(AriaRole.Row, new() { Name = "Trailblazer Trailblazer Great" }).GetByRole(AriaRole.Button).ClickAsync();
         await CheckCartItemCountAsync(3);
