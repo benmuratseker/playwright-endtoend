@@ -1,10 +1,11 @@
+using EndToEnd.Tests.Utilities;
 using Microsoft.Playwright;
 
 namespace EndToEnd.Tests;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
-public class Tests : PageTest
+public class Tests : BaseTest //PageTest
 {
     [Test]
     public async Task
@@ -31,7 +32,8 @@ public class Tests : PageTest
     [Test]
     public async Task HomePageHasCorrectContent()
     {
-        await Page.GotoAsync("https://localhost:7224");
+        // await Page.GotoAsync("https://localhost:7224");
+        await Page.GotoAsync(BaseUrl);
         
         await Expect(Page).ToHaveTitleAsync("Carved Rock Fitness");
         await Expect(Page.GetByText("GET A GRIP")).ToBeVisibleAsync();
@@ -40,7 +42,8 @@ public class Tests : PageTest
     [Test]
     public async Task ListingPageAddingItemsToCart()
     {
-        await Page.GotoAsync("https://localhost:7224/");
+        // await Page.GotoAsync("https://localhost:7224/");
+        await Page.GotoAsync(BaseUrl);
         await Page.GetByRole(AriaRole.Link, new() { Name = "Footwear" }).ClickAsync();
         await Page.GetByRole(AriaRole.Row, new() { Name = "Trailblazer Trailblazer Great" }).GetByRole(AriaRole.Button).ClickAsync();
         await CheckCartItemCountAsync(1);

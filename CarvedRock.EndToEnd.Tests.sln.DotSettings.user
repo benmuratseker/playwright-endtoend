@@ -3,4 +3,5 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::9CC4353E-F888-47DA-B556-89E5DDFBF83B::net8.0::EndToEnd.Tests.Tests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestRunner/RunConfigurationFilename/@EntryValue">/Users/muratseker/Documents/repos/playwright-endtoend/EndToEnd.Tests/.runsettings</s:String></wpf:ResourceDictionary>
